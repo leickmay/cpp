@@ -18,26 +18,13 @@ void	ft_add(annuaire *contact)
 {
 	std::string	input;
 	int			i = 0;
-	//int			exist;
 
-	//exist = annuaire[i].entry_exist()
 	while (contact[i].entry_exist() && i < 8)
 		i++;
 	if (i < 8)
-	{
 		contact[i].fill_contact();
-		contact[i].display_info();
-	}
 	else
-	{
-		std::cout << "Too much entries. Choose one to replace : " << std::endl;
-		for (i = 1; i <= 8; i++)
-		{
-			std::cout << i << " ";
-			contact[i].display_first_name();
-		}
-	}
-	//contact[0].display_first_name();
+		std::cout << "Too much entries." << std::endl;
 }
 
 void	ft_exit(void)
@@ -53,8 +40,9 @@ void	ft_search(annuaire *contact)
 
 	if (!contact[i].entry_exist())
 		std::cout << "You didn't add any contact" << std::endl;
-	else{
-		while (contact[i].entry_exist())
+	else
+	{
+		while (contact[i].entry_exist() && i < 8)
 		{
 			contact[i].display_search(i);
 			i++;
@@ -62,7 +50,10 @@ void	ft_search(annuaire *contact)
 		std::cout << "Choose an index to display informations :" << std::endl;
 		getline(std::cin, input);
 		i = atoi(input.c_str());
-		std::cout << "i : " << i << std::endl;
+		if (i >= 1 && i <= 8)
+			contact[i - 1].display_info();
+		else
+			std::cout << "This command doesn't exist, back to menu." << std::endl;
 	}
 }
 
@@ -92,5 +83,3 @@ int	main(int ac, char **av)
 	std::cout << "Welcome to the all new version of Minitel - Turfu edition !" << std::endl;
 	ft_menu();
 }
-
-// cin.ignore();

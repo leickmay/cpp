@@ -12,21 +12,6 @@
 
 #include "annuaire.hpp"
 
-annuaire::annuaire()
-{
-	/*first_name = NULL;
-	last_name = "-----";
-	nickname = "-----";
-	login = "-----";
-	postal_adress = "-----";
-	email_adress = "-----";
-	phone_number = "-----";
-	birthday_date = "-----";
-	favorite_meal = "-----";
-	underwear_color = "-----";
-	darkest_secret = "-----";*/
-}
-
 void	annuaire::fill_contact()
 {
 	std::string	input;
@@ -115,20 +100,14 @@ void	annuaire::display_info()
 	std::cout << favorite_meal << std::endl << underwear_color << std::endl << darkest_secret << std::endl;
 }
 
-void	annuaire::add_first_name(std::string input)
+void	annuaire::display_name(void)
 {
-	first_name = input;
-}
-
-void	annuaire::display_first_name(void)
-{
-	std::cout << "first name is : " << first_name << std::endl;
+	std::cout << first_name << " " << last_name << std::endl;
 }
 
 int	annuaire::entry_exist(void)
 {
-	std::cout << first_name.size() << std::endl;
-	if (!first_name.size())
+	if (first_name.empty())
 		return 0;
 	else
 		return 1;

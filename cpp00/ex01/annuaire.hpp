@@ -19,11 +19,10 @@ class annuaire
 {
 	public:
 
-	annuaire();
 	void	add_first_name(std::string input);
 	void	fill_contact();
 	void	display_info();
-	void	display_first_name(void);
+	void	display_name(void);
 	int		entry_exist(void);
 	void	display_search(int i);
 	void	display_search_elt(std::string str);
