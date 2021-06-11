@@ -1,6 +1,8 @@
-HEADER = 
+HEADER = annuaire.hpp
 
-SRCS = main.cpp
+SRCS =	main.cpp \
+		annuaire.cpp \
+
 
 NAME = minitel_du_turfu
 
