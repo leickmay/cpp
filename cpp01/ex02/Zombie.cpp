@@ -1,17 +1,17 @@
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string n, std::string t)
+Zombie::Zombie(std::string name, std::string type)
 {
-	name = n;
-	type = t;
+	m_name = name;
+	m_type = type;
 }
 
 void	Zombie::advert()
 {
-	std::cout << "<" << name << " (" << type << ")> Braiiiiiiinnnssss ..." << std::endl;
+	std::cout << "<" << m_name << " (" << m_type << ")> Braiiiiiiinnnssss ..." << std::endl;
 }
 
 void	Zombie::announce()
 {
-	std::cout << name << " : \"Raaaaarrgh i'm aaaaaanouncing myseeeeeeelf\"" << std::endl;
+	std::cout << m_name << " : \"Raaaaarrgh i'm aaaaaanouncing myseeeeeeelf\"" << std::endl;
 }

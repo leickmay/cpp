@@ -7,14 +7,14 @@ class Zombie
 {
 	public:
 
-	Zombie(std::string n, std::string t);
+	Zombie(std::string name, std::string type);
 	void	advert();
 	void	announce();
 
 	private:
 
-	std::string	name;
-	std::string	type;
+	std::string	m_name;
+	std::string	m_type;
 };
 
 #endif
