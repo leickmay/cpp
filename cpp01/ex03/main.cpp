@@ -8,3 +8,5 @@ int	main()
 	horde.announce();
 	return 0;
 }
+
+//clang++ -Wall -Wextra -Werror -std=c++98 main.cpp Zombie.cpp ZombieHorde.cpp
