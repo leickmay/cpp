@@ -17,6 +17,7 @@
 void	ft_replace(char **av, std::string filename)
 {
 	std::string	s1, s2, line;
+	int	i(0);
 	s1 = av[2];
 	s2 = av[3];
 
@@ -31,10 +32,13 @@ void	ft_replace(char **av, std::string filename)
 			std::ofstream w_file(filename + ".replace");
 			while (getline(r_file, line))
 			{
-				std::cout << line.find(s1) << "\n";
-				if (line.find(s1) != std::string::npos)
-					line.replace(line.find(s1), s1.size(), s2);
-				std::cout << line << std::endl;
+				i = line.find(s1);
+				while (i != std::string::npos)
+				{
+					line.replace(i, s1.size(), s2);
+					i = line.find(s1, i + s2.size());
+
+				}
 				w_file << line << std::endl;
 			}
 			r_file.close();
