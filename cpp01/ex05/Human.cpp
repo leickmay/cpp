@@ -1,21 +1,11 @@
 #include "Human.hpp"
 
-Human::Human()
+const void *Human::identify()
 {
-	m_brain = new Brain;
+	return this->m_brain.identify();
 }
 
-Human::~Human()
+const Brain	&Human::getBrain()
 {
-	delete m_brain;
-}
-
-Brain	*Human::identify()
-{
-	return m_brain;
-}
-
-Brain	Human::getBrain()
-{
-	return (*m_brain);
+	return (this->m_brain);
 }

@@ -7,7 +7,7 @@ class Brain
 {
 	public:
 	Brain();
-	Brain	*identify();
+	const void	*identify() const;
 
 	private:
 	double	m_weight;

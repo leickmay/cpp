@@ -7,7 +7,7 @@ Brain::Brain()
 	m_nbNeurones = 2347483647;
 }
 
-Brain	*Brain::identify()
+const void	*Brain::identify() const
 {
 	return this;
 }

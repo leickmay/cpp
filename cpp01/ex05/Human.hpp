@@ -7,13 +7,11 @@
 class Human
 {
 	public:
-	Human();
-	~Human();
-	Brain	getBrain();
-	Brain	*identify();
+	const Brain	&getBrain();
+	const void	*identify();
 
 	private:
-	Brain *m_brain;
+	const Brain m_brain;
 };
 
 
