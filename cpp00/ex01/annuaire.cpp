@@ -6,7 +6,7 @@
 /*   By: leickmay <leickmay@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/11 11:23:34 by leickmay          #+#    #+#             */
-/*   Updated: 2021/06/11 14:58:05 by leickmay         ###   ########lyon.fr   */
+/*   Updated: 2021/06/16 17:56:46 by leickmay         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,9 +82,6 @@ void	annuaire::display_search_elt(std::string str)
 
 void	annuaire::display_search(int i)
 {
-	int	space;
-	int	j;
-
 	std::cout << "         " << i + 1;
 	display_search_elt(first_name);
 	display_search_elt(last_name);

@@ -6,7 +6,7 @@
 /*   By: leickmay <leickmay@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 18:28:46 by leickmay          #+#    #+#             */
-/*   Updated: 2021/06/11 15:09:06 by leickmay         ###   ########lyon.fr   */
+/*   Updated: 2021/06/16 17:56:07 by leickmay         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void	ft_menu(void)
 	}
 }
 
-int	main(int ac, char **av)
+int	main()
 {
 	std::cout << "Welcome to the all new version of Minitel - Turfu edition !" << std::endl;
 	ft_menu();
