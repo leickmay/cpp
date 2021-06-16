@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: leickmay <leickmay@student.42lyon.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/06/16 11:25:27 by leickmay          #+#    #+#             */
+/*   Updated: 2021/06/16 11:25:29 by leickmay         ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Pony.hpp"
 
 void	PonyOnTheStack(std::string name, std::string color, int age, int height, int weight)
