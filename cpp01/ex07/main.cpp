@@ -6,7 +6,7 @@
 /*   By: leickmay <leickmay@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 15:57:07 by leickmay          #+#    #+#             */
-/*   Updated: 2021/06/15 16:49:16 by leickmay         ###   ########lyon.fr   */
+/*   Updated: 2021/06/16 17:39:28 by leickmay         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 void	ft_replace(char **av, std::string filename)
 {
 	std::string	s1, s2, line;
-	int	i(0);
+	unsigned long	i(0);
 	s1 = av[2];
 	s2 = av[3];
 

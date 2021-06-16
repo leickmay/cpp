@@ -11,7 +11,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 OBJS = $(SRCS:.cpp=.o)
 
 .cpp.o:
-		$(CC) $(CFLAGS) -c $< -o $(<:.cpp=.o)
+		$(CC) $(FLAGS) -c $< -o $(<:.cpp=.o)
 
 $(NAME):	$(OBJS)
 			$(CC) -o $(NAME) $(SRCS)
