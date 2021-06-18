@@ -6,24 +6,25 @@
 /*   By: leickmay <leickmay@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 13:32:21 by leickmay          #+#    #+#             */
-/*   Updated: 2021/06/16 16:48:55 by leickmay         ###   ########lyon.fr   */
+/*   Updated: 2021/06/18 10:17:41 by leickmay         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
 # define FIXED_HPP
-
+# include <iostream>
 
 class Fixed
 {
 	public:
 	Fixed();
 	~Fixed();
-	//constructeur par copie
 	Fixed(Fixed const& other);
-	//overload d'operateur d'assignation
+	Fixed& operator=(Fixed const& other);
 	int	getRawBits(void) const;
 	void	setRawBits(int const raw);
+
+
 
 	private:
 	int					m_point;
@@ -31,3 +32,7 @@ class Fixed
 };
 
 #endif
+
+//clang++ -Werror -Wall -Wextra *.cpp
+
+
