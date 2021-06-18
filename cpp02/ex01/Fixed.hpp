@@ -6,7 +6,7 @@
 /*   By: leickmay <leickmay@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 13:32:21 by leickmay          #+#    #+#             */
-/*   Updated: 2021/06/18 10:45:19 by leickmay         ###   ########lyon.fr   */
+/*   Updated: 2021/06/18 10:17:41 by leickmay         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 class Fixed
 {
 	public:
-	Fixed(const int);
+	Fixed();
 	~Fixed();
 	Fixed(Fixed const& other);
 	Fixed& operator=(Fixed const& other);
