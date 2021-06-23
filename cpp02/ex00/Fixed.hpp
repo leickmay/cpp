@@ -17,17 +17,15 @@
 class Fixed
 {
 	public:
-	Fixed(const int);
+	Fixed();
 	~Fixed();
 	Fixed(Fixed const& other);
 	Fixed& operator=(Fixed const& other);
 	int	getRawBits(void) const;
 	void	setRawBits(int const raw);
 
-
-
 	private:
-	int					m_point;
+	int					m_value;
 	static const int	m_bits;
 };
 

@@ -13,26 +13,31 @@
 #ifndef FIXED_HPP
 # define FIXED_HPP
 # include <iostream>
+# include <cmath>
 
 class Fixed
 {
 	public:
 	Fixed();
+	Fixed(int const value);
+	Fixed(float const value);
 	~Fixed();
 	Fixed(Fixed const& other);
 	Fixed& operator=(Fixed const& other);
-	int	getRawBits(void) const;
-	void	setRawBits(int const raw);
-
-
+	Fixed& operator<<(Fixed const& other);
+	float	toFLoat(void) const;
+	int		toInt(void) const;
+	int		getRawBits(void) const;
+	void	setRawBits(int value);
 
 	private:
-	int					m_point;
-	static const int	m_bits;
+	int					m_value;
+	static const int	m_bits = 8;
 };
 
-#endif
+std::ostream &operator<<(std::ostream &out, Fixed &src);
 
-//clang++ -Werror -Wall -Wextra *.cpp
+
+#endif
 
 
