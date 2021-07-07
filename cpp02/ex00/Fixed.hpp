@@ -31,6 +31,5 @@ class Fixed
 
 #endif
 
-//clang++ -Werror -Wall -Wextra *.cpp
 
 

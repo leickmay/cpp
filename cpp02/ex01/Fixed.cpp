@@ -61,7 +61,7 @@ int		Fixed::toInt(void) const
 
 Fixed &Fixed::operator=(Fixed const& other)
 {
-	std::cout << "Assignation constructor called" << std::endl;
+	std::cout << "Assignation operator called" << std::endl;
 	m_value = other.getRawBits();
 	return *this;
 }
