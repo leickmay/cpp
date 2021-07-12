@@ -14,6 +14,7 @@ class ScavTrap : public virtual ClapTrap
 		void	guardGate();
 		void	attack(std::string const& target);
 		void	displayStats();
+		void	setEnergyPoints();
 
 	private:
 		bool	m_guardMode;

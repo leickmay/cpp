@@ -1,23 +1,17 @@
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap():ClapTrap(), FragTrap(), ScavTrap()
+DiamondTrap::DiamondTrap():ClapTrap(), ScavTrap(), FragTrap()
 {
 	std::cout << "Unknown became a DiamondTrap" << std::endl;
 	m_name = "Unknown";
-	m_hitPoints = FragTrap::m_hitPoints;
-	m_energyPoints = ScavTrap::m_energyPoints;
-	m_attackDamages = FragTrap::m_attackDamages;
+	ScavTrap::setEnergyPoints();
 }
 
-DiamondTrap::DiamondTrap(std::string name):ClapTrap(name), FragTrap(name), ScavTrap(name)
+DiamondTrap::DiamondTrap(std::string name):ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name)
 {
 	std::cout << name << " became a DiamondTrap" << std::endl;
 	m_name = name;
-	ClapTrap::m_name = name + "_clap_name";
-	m_hitPoints = FragTrap::m_hitPoints;
-	m_energyPoints = ScavTrap::m_energyPoints;
-	m_attackDamages = FragTrap::m_attackDamages;
-
+	ScavTrap::setEnergyPoints();
 }
 
 DiamondTrap::~DiamondTrap()

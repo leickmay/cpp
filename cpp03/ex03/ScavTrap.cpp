@@ -50,3 +50,8 @@ void	ScavTrap::displayStats()
 	std::cout << "energypoints : " << m_energyPoints << std::endl;
 	std::cout << "attack damages : " << m_attackDamages << std::endl;
 }
+
+void	ScavTrap::setEnergyPoints()
+{
+	m_energyPoints = 50;
+}
