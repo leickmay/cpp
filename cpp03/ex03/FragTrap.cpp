@@ -10,7 +10,7 @@ FragTrap::FragTrap() : ClapTrap()
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-	std::cout << name <<  " became a FragTrap !" << std::endl;
+	std::cout << m_name <<  " became a FragTrap !" << std::endl;
 	m_attackDamages = 30;
 	m_energyPoints = 100;
 	m_hitPoints = 100;
@@ -44,12 +44,12 @@ FragTrap::~FragTrap()
 	std::cout << m_name << " isn't a FragTrap anymore" << std::endl;
 }
 
-void	FragTrap::highFivesGuys()
+void	FragTrap::highFivesGuys() const
 {
 	std::cout << BLUE << m_name << " request a legendary high five" << RESET << std::endl;
 }
 
-void	FragTrap::displayStats()
+void	FragTrap::displayStats() const
 {
 	std::cout << m_name << " FragTrap Stats : " << std::endl;
 	std::cout << "hitPoints : " << m_hitPoints << std::endl;

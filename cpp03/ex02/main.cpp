@@ -8,6 +8,8 @@ int	main()
 	ScavTrap bob("Bob");
 	FragTrap johnny("Johnny");
 
+	johnny.displayStats();
+	bob.displayStats();
 	johnny.attack("Maurice");
 	maurice.takeDamage(30);
 	maurice.beRepaired(5);

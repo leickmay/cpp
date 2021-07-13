@@ -42,3 +42,11 @@ void	ScavTrap::guardGate()
 	}
 	
 }
+
+void	ScavTrap::displayStats() const
+{
+	std::cout << m_name << " ScavTrap Stats : " << std::endl;
+	std::cout << "hitPoints : " << m_hitPoints << std::endl;
+	std::cout << "energypoints : " << m_energyPoints << std::endl;
+	std::cout << "attack damages : " << m_attackDamages << std::endl;
+}

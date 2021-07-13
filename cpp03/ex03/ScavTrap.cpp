@@ -10,7 +10,7 @@ ScavTrap::ScavTrap() : ClapTrap(), m_guardMode(false)
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name), m_guardMode(false)
 {
-	std::cout << name << " became a ScavTrap !" << std::endl;
+	std::cout << m_name << " became a ScavTrap !" << std::endl;
 	m_attackDamages = 20;
 	m_energyPoints = 50;
 	m_hitPoints = 100;
@@ -43,7 +43,7 @@ void	ScavTrap::guardGate()
 	
 }
 
-void	ScavTrap::displayStats()
+void	ScavTrap::displayStats() const
 {
 	std::cout << m_name << " ScavTrap Stats : " << std::endl;
 	std::cout << "hitPoints : " << m_hitPoints << std::endl;

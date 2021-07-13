@@ -44,7 +44,15 @@ FragTrap::~FragTrap()
 	std::cout << m_name << " isn't a FragTrap anymore" << std::endl;
 }
 
-void	FragTrap::highFivesGuys(void)
+void	FragTrap::highFivesGuys(void) const
 {
 	std::cout << BLUE << m_name << " request a legendary high five" << RESET << std::endl;
+}
+
+void	FragTrap::displayStats() const
+{
+	std::cout << m_name << " FragTrap Stats : " << std::endl;
+	std::cout << "hitPoints : " << m_hitPoints << std::endl;
+	std::cout << "energypoints : " << m_energyPoints << std::endl;
+	std::cout << "attack damages : " << m_attackDamages << std::endl;
 }

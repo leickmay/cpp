@@ -6,7 +6,7 @@ ClapTrap::ClapTrap():m_hitPoints(10), m_energyPoints(10), m_attackDamages(0)
 	std::cout << m_name << " is born ! You didn't gave him any name..." << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name):m_hitPoints(100), m_energyPoints(50), m_attackDamages(20)
+ClapTrap::ClapTrap(std::string name):m_hitPoints(10), m_energyPoints(10), m_attackDamages(0)
 {
 	m_name = name;
 	std::cout << m_name << " is born !" << std::endl;

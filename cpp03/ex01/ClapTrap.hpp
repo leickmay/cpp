@@ -12,20 +12,20 @@
 class ClapTrap
 {
 	public:
-	ClapTrap();
-	ClapTrap(std::string name);
-	ClapTrap(ClapTrap const& other);
-	ClapTrap&	operator=(ClapTrap const& other);
-	~ClapTrap();
-	void	attack(std::string const& target);
-	void	takeDamage(unsigned int amount);
-	void	beRepaired(unsigned int amount);
+		ClapTrap();
+		ClapTrap(std::string name);
+		ClapTrap(ClapTrap const& other);
+		ClapTrap&	operator=(ClapTrap const& other);
+		~ClapTrap();
+		void	attack(std::string const& target);
+		void	takeDamage(unsigned int amount);
+		void	beRepaired(unsigned int amount);
 
 	protected:
-	std::string m_name;
-	int			m_hitPoints;
-	int			m_energyPoints;
-	int			m_attackDamages;
+		std::string m_name;
+		int			m_hitPoints;
+		int			m_energyPoints;
+		int			m_attackDamages;
 };
 
 #endif
