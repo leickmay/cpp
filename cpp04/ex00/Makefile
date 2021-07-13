@@ -1,10 +1,12 @@
 INCLUDES =	Sorcerer.hpp\
 			Peon.hpp\
-			Victim.hpp
+			Victim.hpp\
+			Unicorn.hpp
 
 SRCS =	Sorcerer.cpp\
 		Peon.cpp\
 		Victim.cpp\
+		Unicorn.cpp\
 		main.cpp
 
 NAME = Polymorphism
