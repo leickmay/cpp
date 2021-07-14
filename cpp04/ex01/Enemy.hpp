@@ -9,8 +9,8 @@ class Enemy
 		Enemy();
 
 	protected:
-		int	hitPoints;
-		std::string	type;
+		int	_hitPoints;
+		std::string	_type;
 	
 	public:
 		Enemy(int hp, std::string const & type);
@@ -20,7 +20,7 @@ class Enemy
 		std::string const getType() const;
 		int	getHP() const;
 
-		virtual void	takeDamage(int);
+		virtual void	takeDamage(int amount);
 };
 
 #endif
