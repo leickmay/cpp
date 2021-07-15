@@ -16,7 +16,7 @@ class Enemy
 		Enemy(int hp, std::string const & type);
 		Enemy(Enemy const& other);
 		Enemy	&operator=(Enemy const& other);
-		~Enemy();
+		virtual ~Enemy();
 		std::string const getType() const;
 		int	getHP() const;
 

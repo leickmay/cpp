@@ -2,7 +2,9 @@ INCLUDES =	AWeapon.hpp\
 			Character.hpp\
 			Enemy.hpp\
 			PlasmaRifle.hpp\
-			Powerfist.hpp\
+			PowerFist.hpp\
+			Bazooka.hpp\
+			TurboDemon.hpp\
 			RadScorpion.hpp\
 			SuperMutant.hpp
 
@@ -10,7 +12,9 @@ SRCS =	AWeapon.cpp\
 		Character.cpp\
 		Enemy.cpp\
 		PlasmaRifle.cpp\
-		Powerfist.cpp\
+		PowerFist.cpp\
+		Bazooka.cpp\
+		TurboDemon.cpp\
 		RadScorpion.cpp\
 		SuperMutant.cpp\
 		main.cpp

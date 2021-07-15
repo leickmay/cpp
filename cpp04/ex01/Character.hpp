@@ -3,8 +3,10 @@
 
 # include "PlasmaRifle.hpp"
 # include "PowerFist.hpp"
+# include "Bazooka.hpp"
 # include "RadScorpion.hpp"
 # include "SuperMutant.hpp"
+# include "TurboDemon.hpp"
 
 class Character
 {
@@ -12,7 +14,7 @@ class Character
 		Character();
 		std::string	_name;
 		int			_ap;
-		void		*_weapon;
+		AWeapon		*_weapon;
 
 	public:
 		Character(std::string const& name);
@@ -22,11 +24,11 @@ class Character
 		void	recoverAP();
 		void	equip(AWeapon *w);
 		void	attack(Enemy *e);
-		std::string	getName() const	{return _name;};
-		int	getAP() const			{return _ap;};
-		void	*getWeapon() const	{return _weapon;};
+		std::string	getName() const;
+		int	getAP() const;
+		AWeapon	*getWeapon() const;
 };
 
-
+std::ostream &operator<<(std::ostream &out, Character &src);
 
 #endif
