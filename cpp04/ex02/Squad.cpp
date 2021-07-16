@@ -19,12 +19,11 @@ Squad::~Squad()
 
 Squad::Squad(Squad const& other)
 {
-	std::cout << "coucou" << std::endl;
+	std::cout << "Copy constructor called" << std::endl;
 	t_list	*nlist = NULL;
 	t_list	*tmp = NULL;
 	t_list	*olist = other._list;
 
-	std::cout << "coucou" << std::endl;
 	if (olist)
 	{
 		nlist = new t_list;
@@ -45,7 +44,7 @@ Squad&	Squad::operator=(Squad const& other)
 {
 	if (this != &other)
 	{
-		
+		std::cout << "yo" << std::endl;
 	}
 	return *this;
 }

@@ -28,13 +28,14 @@ int	main()
 	ISquad* vlc2 = new Squad;
 	vlc2->push(jean);
 	vlc2->push(marc);
-	ISquad* copy = new Squad(*vlc2);
+	//ISquad* copy = vlc2;
+	ISquad *copy(vlc2);
 	for (int i = 0; i < copy->getCount(); ++i)
 	{
-		ISpaceMarine* cur = copy->getUnit(i);
-		cur->battleCry();
-		cur->rangedAttack();
-		cur->meleeAttack();
+		ISpaceMarine* cur2 = copy->getUnit(i);
+		cur2->battleCry();
+		cur2->rangedAttack();
+		cur2->meleeAttack();
 	}
 	delete vlc2;
 	return 0;
