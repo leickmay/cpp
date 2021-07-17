@@ -10,7 +10,8 @@ Dog::Dog():Animal("Dog")
 Dog::Dog(Dog const& other):Animal(other._type)
 {
 	std::cout << "Dog copy constructor called" << std::endl;
-	//_brain = new Brain(other._brain);
+	_brain = new Brain;
+	*_brain = Brain(*other._brain);
 }
 
 Dog&	Dog::operator=(Dog const& other)
@@ -19,7 +20,8 @@ Dog&	Dog::operator=(Dog const& other)
 	if (this != &other)
 	{
 		_type = other._type;
-		_brain = new Brain();
+		_brain = new Brain;
+		*_brain = Brain(*other._brain);
 	}
 	return *this;
 }
@@ -38,9 +40,4 @@ void	Dog::makeSound() const
 void	Dog::displayIdeas() const
 {
 	_brain->displayIdeas();
-}
-
-void	Dog::setIdeas() 
-{
-	_brain->setIdeas("eat", "shit", "sleep");
 }

@@ -2,15 +2,6 @@
 
 Brain::Brain()
 {
-	/*for(int i = 0; i < 100; i++)
-	{
-		if (i == 0 || i % 3 == 0)
-			_ideas[i] = "eat";
-		if (i % 3 == 1)
-			_ideas[i] = "shit";
-		if (i % 3 == 2)
-			_ideas[i] = "sleep";
-	}*/
 }
 
 Brain::Brain(Brain const& other)
