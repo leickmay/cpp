@@ -1,4 +1,4 @@
-#ifndef IMATERISOURCE_HPP
+#ifndef IMATERIASOURCE_HPP
 # define IMATERIASOURCE_HPP
 
 # include "AMateria.hpp"

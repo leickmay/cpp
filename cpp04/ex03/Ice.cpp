@@ -1,4 +1,5 @@
-#include "ice.hpp"
+#include "Ice.hpp"
+#include "Character.hpp"
 
 Ice::Ice():AMateria("ice")
 {

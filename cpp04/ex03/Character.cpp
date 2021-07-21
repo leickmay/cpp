@@ -4,7 +4,7 @@ Character::Character(std::string name):_name(name)
 {
 }
 
-Character::Character(Character const& other)
+Character::Character(Character const& other):_name(other._name)
 {
 	//a faire
 }
@@ -12,6 +12,8 @@ Character::Character(Character const& other)
 Character&	Character::operator=(Character const& other)
 {
 	// a faire
+	(void)other._name;
+	return *this;
 }
 
 Character::~Character()
@@ -30,7 +32,8 @@ void				Character::equip(AMateria *m)
 	{
 		if (!_materias[i])
 		{
-			_materias[i] = m;
+			if (m->getType() == "cure" || m->getType() == "ice")
+				_materias[i] = m;
 			break;
 		}
 	}
@@ -43,5 +46,6 @@ void				Character::unequip(int idx)
 
 void				Character::use(int idx, ICharacter& target)
 {
-	_materias[idx]->use(target);
+	if (idx >= 0 && idx < 4)
+		_materias[idx]->use(target);
 }

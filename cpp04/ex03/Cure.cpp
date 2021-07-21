@@ -1,4 +1,5 @@
-#include "cure.hpp"
+#include "Cure.hpp"
+#include "Character.hpp"
 
 Cure::Cure():AMateria("cure")
 {

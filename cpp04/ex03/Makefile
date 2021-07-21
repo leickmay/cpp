@@ -13,7 +13,7 @@ SRCS =	AMateria.cpp\
 		MateriaSource.cpp\
 		main.cpp
 
-NAME = Interface&recap
+NAME = Interfacerecap
 
 CC = clang++
 

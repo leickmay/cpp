@@ -5,6 +5,8 @@
 
 int main()
 {
+	std::cout << "=====Main of the subject=====" << std::endl << std::endl;
+
 	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
@@ -26,5 +28,39 @@ int main()
 	delete me;
 	delete src;
 
+	std::cout << std::endl << "=====Complementary tests=====" << std::endl << std::endl;
+
+	IMateriaSource* src2 = new MateriaSource();
+	src2->learnMateria(new Ice());
+	src2->learnMateria(new Ice());
+	src2->learnMateria(new Cure());
+	src2->learnMateria(new Cure());
+	src2->learnMateria(new Ice());
+	IMateriaSource* copy(src2);
+	ICharacter* mich = new Character("Mich");
+	AMateria* tmp2;
+	ICharacter* jean = new Character("Jean");
+	ICharacter* copyjean(jean);
+	tmp2 = copy->createMateria("ice");
+	mich->equip(tmp2);
+	tmp2 = copy->createMateria("cure");
+	mich->equip(tmp2);
+	tmp2 = copy->createMateria("ice");
+	mich->equip(tmp2);
+	tmp2 = copy->createMateria("cure");
+	mich->equip(tmp2);
+	tmp2 = copy->createMateria("ice");
+	mich->equip(tmp2);
+	tmp2 = copy->createMateria("cure");
+	mich->equip(tmp2);
+	mich->use(0, *jean);
+	mich->use(1, *jean);
+	delete jean;
+	mich->use(2, *copyjean);
+	mich->use(3, *copyjean);
+	mich->use(4, *copyjean);
+
+	delete mich;
+	delete src2;
 	return 0;
 }
