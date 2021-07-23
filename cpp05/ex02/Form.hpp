@@ -23,7 +23,7 @@ class Form
 		Form(std::string const name, int const gradSign, int const gradExecute);
 		Form(Form const& other);
 		Form	&operator=(Form const& other);
-		~Form();
+		virtual ~Form();
 		std::string const	getName() const;
 		bool				getSigned() const;
 		int					getGradSign() const;

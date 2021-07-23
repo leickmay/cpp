@@ -1,8 +1,9 @@
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
-#include "PresidentialPardonForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "ShrubberyCreationForm.hpp"
+//#include "Form.hpp"
+//#include "PresidentialPardonForm.hpp"
+//#include "RobotomyRequestForm.hpp"
+//#include "ShrubberyCreationForm.hpp"
+#include "Intern.hpp"
 
 int main()
 {
@@ -45,4 +46,14 @@ int main()
 	marco.signForm(tree);
 	marco.executeForm(tree);
 	std::cout << rob;
+
+	std::cout << std::endl << "==Here come the intern==" << std::endl;
+	Intern corenting;
+	Form* rrf;
+	rrf = corenting.makeForm("robotomy request", "Bender");
+	marco.signForm(*rrf);
+	marco.executeForm(*rrf);
+	bob.executeForm(*rrf);
+
+	delete rrf;
 }
