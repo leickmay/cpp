@@ -76,10 +76,6 @@ void				Bureaucrat::decrementGrade()
 void				Bureaucrat::signForm(Form &f)
 {
 	f.beSigned(*this);
-	if (f.getSigned() == true)
-		std::cout << _name << " signs " << f.getName() << std::endl;
-	else
-		std::cout << _name << " cannot sign because "//////////////// << std::endl;
 }
 
 std::ostream &operator<<(std::ostream &out, Bureaucrat &src)

@@ -1,6 +1,7 @@
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
 
-Form::Form(std::string const name, int const gradSign, int const gradExecute):_name(name), _gradSign(gradSign), _gradExecute(gradExecute), _signed(false)
+Form::Form(std::string const name, int const gradSign, int const gradExecute):_name(name), _signed(false), _gradSign(gradSign), _gradExecute(gradExecute)
 {
 	try
 	{
@@ -16,7 +17,7 @@ Form::Form(std::string const name, int const gradSign, int const gradExecute):_n
 	
 }
 
-Form::Form(Form const& other):_name(other._name), _gradSign(other._gradSign), _gradExecute(other._gradExecute), _signed(other._signed)
+Form::Form(Form const& other):_name(other._name), _signed(other._signed), _gradSign(other._gradSign), _gradExecute(other._gradExecute)
 {
 }
 
@@ -41,12 +42,12 @@ bool				Form::getSigned() const
 	return _signed;
 }
 
-int const			Form::getGradSign() const
+int					Form::getGradSign() const
 {
 	return _gradSign;
 }
 
-int const			Form::getGradExecute() const
+int					Form::getGradExecute() const
 {
 	return _gradExecute;
 }
@@ -56,14 +57,26 @@ void				Form::beSigned(Bureaucrat const &b)
 	try
 	{
 		if (b.getGrade() > _gradSign)
-			throw Form::CannotSignException("grad is too low");
+			throw Form::GradeTooLowException();
 		if (_signed == true)
-			throw Form::CannotSignException("form already signed");
+			throw Form::AlreadySignedException();
 		_signed = true;
+		std::cout << b.getName() << " signs " << _name << std::endl;
 	}
 	catch(const std::exception& e)
 	{
-		std::
+		std::cerr << b.getName() << " cannot sign because " << e.what() << std::endl;
 	}
 	
+}
+
+std::ostream	&operator<<(std::ostream &out, Form &src)
+{
+	std::string s;
+	if (src.getSigned() == true)
+		s = "is signed";
+	else
+		s = "isn't signed";
+	out << src.getName() << " is a form with a sign grad of " << src.getGradSign() << ", an execute grad of " << src.getGradExecute() << ", and " << s << std::endl;
+	return out;
 }

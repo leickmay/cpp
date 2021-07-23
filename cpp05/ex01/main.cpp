@@ -17,9 +17,15 @@ int main()
 	deustach.decrementGrade();
 	std::cout << deustach;
 
+	std::cout << std::endl << BLUE << "== Try to create Bureaucrats with invalid grade : ==" << RESET << std::endl;
 	Bureaucrat ldevilla("Ldevilla", 1500);
 	Bureaucrat ckurt("Ckurt", 0);
 
-	Form("Pass Sanitaire", 20, 10);
-	
+	std::cout << std::endl << BLUE << "== Try to sign form : ==" << RESET << std::endl;
+	Form pass("Pass Sanitaire", 20, 10);
+	deustach.signForm(pass);
+	std::cout << pass;
+	bob.signForm(pass);
+	std::cout << pass;
+	bob.signForm(pass);
 }

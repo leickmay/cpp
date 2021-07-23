@@ -1,7 +1,13 @@
 #ifndef FORM_HPP
 # define FORM_HPP
 
-# include "Bureaucrat.hpp"
+//# include "Bureaucrat.hpp"
+# include <iostream>
+
+# define BLUE "\e[0;34m"
+# define RESET "\e[0m"
+
+class Bureaucrat;
 
 class Form
 {
@@ -19,15 +25,15 @@ class Form
 		~Form();
 		std::string const	getName() const;
 		bool				getSigned() const;
-		int const			getGradSign() const;
-		int const			getGradExecute() const;
+		int					getGradSign() const;
+		int					getGradExecute() const;
 		void				beSigned(Bureaucrat const &b);
 
 	class GradeTooHighException : public std::exception
 	{
 		const char* what() const throw()
 		{
-			return "\e[0;31mGrade is too high ! (max is 1)\e[0m";
+			return "\e[0;31mGrade is too high !\e[0m";
 		}
 	};
 
@@ -35,17 +41,16 @@ class Form
 	{
 		const char* what() const throw()
 		{
-			return "\e[0;31mGrade is too low ! (min is 150)\e[0m";
+			return "\e[0;31mGrade is too low !\e[0m";
 		}
 	};
 
-	class CannotSignException : public std::exception
+	class AlreadySignedException : public std::exception
 	{
-		private:
-			std::string	_raison;
-		
-		public:
-			CannotSignException(std::string raison):_raison(raison){}
+		const char* what() const throw()
+		{
+			return "\e[0;31mform is already signed\e[0m";
+		}
 	};
 };
 
