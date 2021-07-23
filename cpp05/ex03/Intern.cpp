@@ -54,7 +54,7 @@ Form*	Intern::makeForm(std::string form, std::string target)
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << "Intern cannot make the form : " << e.what() << std::endl;;
+		std::cerr << "Intern cannot make the form : " << e.what() << std::endl;
 	}
 	return 0;
 }
