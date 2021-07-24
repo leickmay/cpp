@@ -21,17 +21,17 @@ Display::~Display()
 void	Display::displayChar() const
 {
 	char	c;
-	long	l;
+	double	d;
 
 	std::cout << "char : ";
 	try
 	{
 		if (isValidStr(_s))
 			throw Display::NoConvertException();
-		l = stol(_s);
-		if (l > CHAR_MAX || l < CHAR_MIN)
+		d = stod(_s);
+		if (d > CHAR_MAX || d < CHAR_MIN)
 			throw Display::NoConvertException();
-		c = static_cast<char>(l);
+		c = static_cast<char>(d);
 		if (!(isprint(c)))
 			throw Display::NonDisplayableException();
 		std::cout << c << std::endl;
@@ -45,17 +45,17 @@ void	Display::displayChar() const
 void	Display::displayInt() const
 {
 	int		i;
-	long	l;
+	double	d;
 
 	std::cout << "int : ";
 	try
 	{
 		if (isValidStr(_s))
 			throw Display::NoConvertException();
-		l = stol(_s);
-		if (l > INT_MAX || l < INT_MIN)
+		d = stod(_s);
+		if (d > INT_MAX || d < INT_MIN)
 			throw Display::NoConvertException();
-		i = static_cast<int>(l);
+		i = static_cast<int>(d);
 		std::cout << i << std::endl;
 	}
 	catch(const std::exception& e)
