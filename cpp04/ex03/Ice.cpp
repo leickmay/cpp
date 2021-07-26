@@ -5,14 +5,14 @@ Ice::Ice():AMateria("ice")
 {
 }
 
-Ice::Ice(Ice const& other):AMateria(other._type)
+Ice::Ice(Ice const& other):AMateria("ice")
 {
+	(void)other;
 }
 
 Ice&	Ice::operator=(Ice const& other)
 {
-	if (this != &other)
-		_type = other._type;
+	(void)other;
 	return *this;
 }
 

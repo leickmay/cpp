@@ -4,13 +4,15 @@ INCLUDES =	AMateria.hpp\
 			Ice.hpp\
 			ICharacter.hpp\
 			IMateriaSource.hpp\
-			MateriaSource.hpp
+			MateriaSource.hpp\
+			list.hpp
 
 SRCS =	AMateria.cpp\
 		Character.cpp\
 		Cure.cpp\
 		Ice.cpp\
 		MateriaSource.cpp\
+		list.cpp\
 		main.cpp
 
 NAME = Interfacerecap

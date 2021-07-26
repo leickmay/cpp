@@ -5,14 +5,14 @@ Cure::Cure():AMateria("cure")
 {
 }
 
-Cure::Cure(Cure const& other):AMateria(other._type)
+Cure::Cure(Cure const& other):AMateria("cure")
 {
+	(void)other;
 }
 
 Cure&	Cure::operator=(Cure const& other)
 {
-	if (this != &other)
-		_type = other._type;
+	(void)other;
 	return *this;
 }
 

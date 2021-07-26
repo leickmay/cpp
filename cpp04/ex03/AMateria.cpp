@@ -10,8 +10,7 @@ AMateria::AMateria(AMateria const& other):_type(other._type)
 
 AMateria&	AMateria::operator=(AMateria const& other)
 {
-	if (this != &other)
-		_type = other._type;
+	(void)other;
 	return *this;
 }
 

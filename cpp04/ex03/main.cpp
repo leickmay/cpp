@@ -39,8 +39,8 @@ int main()
 	IMateriaSource* copy(src2);
 	ICharacter* mich = new Character("Mich");
 	AMateria* tmp2;
-	ICharacter* jean = new Character("Jean");
-	ICharacter* copyjean(jean);
+	Character* jean = new Character("Jean");
+	Character* copyjean = new Character(*jean);
 	tmp2 = copy->createMateria("ice");
 	mich->equip(tmp2);
 	tmp2 = copy->createMateria("cure");
@@ -53,6 +53,7 @@ int main()
 	mich->equip(tmp2);
 	tmp2 = copy->createMateria("cure");
 	mich->equip(tmp2);
+	mich->unequip(0);
 	mich->use(0, *jean);
 	mich->use(1, *jean);
 	delete jean;
@@ -60,6 +61,7 @@ int main()
 	mich->use(3, *copyjean);
 	mich->use(4, *copyjean);
 
+	delete copyjean;
 	delete mich;
 	delete src2;
 	return 0;

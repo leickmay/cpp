@@ -4,11 +4,13 @@
 # include "ICharacter.hpp"
 # include "Ice.hpp"
 # include "Cure.hpp"
+# include "list.hpp"
 
 class Character : public ICharacter
 {
 	private:
 		AMateria			*_materias[4];
+		t_list				*_garbage;
 		std::string const	_name;
 		Character();
 	
