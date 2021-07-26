@@ -16,6 +16,23 @@ int main()
 	deustach.decrementGrade();
 	std::cout << deustach;
 
-	Bureaucrat ldevilla("Ldevilla", 1500);
-	Bureaucrat ckurt("Ckurt", 0);
+	std::cout << std::endl << BLUE << "== Try to create Bureaucrats with invalid grade : ==" << RESET << std::endl;
+	try
+	{
+		Bureaucrat ldevilla("Ldevilla", 1500);
+		std::cout << ldevilla;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	try
+	{
+		Bureaucrat ckurt("Ckurt", 0);
+		std::cout << ckurt;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
 }

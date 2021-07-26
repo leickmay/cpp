@@ -20,7 +20,6 @@ RobotomyRequestForm::~RobotomyRequestForm()
 
 void	RobotomyRequestForm::action() const
 {
-	srand(time(NULL));
 	int i = rand() % 2;
 	std::cout << YELLOW << "***Scary driller noises***" << RESET << std::endl;
 	if (i == 0)

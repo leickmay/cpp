@@ -6,42 +6,33 @@
 
 int main()
 {
+	srand(time(NULL));
 	Bureaucrat bob("Bob", 2);
-	std::cout << bob;
-	bob.incrementGrade();
-	std::cout << bob;
-	bob.incrementGrade();
-	std::cout << bob;
-
 	Bureaucrat deustach("Deustach", 149);
-	std::cout << deustach;
-	deustach.decrementGrade();
-	std::cout << deustach;
-	deustach.decrementGrade();
-	std::cout << deustach;
-
-	std::cout << std::endl << BLUE << "== Try to create Bureaucrats with invalid grade : ==" << RESET << std::endl;
-	Bureaucrat ldevilla("Ldevilla", 1500);
-	Bureaucrat ckurt("Ckurt", 0);
+	Bureaucrat marco("Marco", 70);
 
 	std::cout << std::endl << BLUE << "== Try to sign form : ==" << RESET << std::endl;
 	PresidentialPardonForm pass("Michel");
+	RobotomyRequestForm rob("Flignoti");
+	ShrubberyCreationForm tree("Tree");
+	RobotomyRequestForm notSigned("NotSigned");
+
 	deustach.signForm(pass);
 	std::cout << pass;
 	bob.signForm(pass);
 	std::cout << pass;
 	bob.signForm(pass);
+	bob.signForm(rob);
+	marco.signForm(tree);
 
 	std::cout << std::endl << BLUE << "== Try to execute form : ==" << RESET << std::endl;
-	Bureaucrat marco("Marco", 70);
+	
 	pass.execute(bob);
 	pass.execute(deustach);
-	RobotomyRequestForm rob("Flignoti");
 	rob.execute(bob);
-	bob.signForm(rob);
 	rob.execute(bob);
-	ShrubberyCreationForm tree("Tree");
 	marco.executeForm(tree);
-	marco.signForm(tree);
 	marco.executeForm(tree);
+	marco.executeForm(notSigned);
+	notSigned.execute(marco);
 }
