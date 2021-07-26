@@ -13,15 +13,15 @@ int	main()
 		delete array[i];
 
 	sleep(1);
-	std::cout << std::endl << "let's see what happens in a dog brain :"<<std::endl;
+	std::cout << std::endl << "let's see what happens in a cat brain :"<<std::endl;
 	sleep(2);
-	Dog* test = new Dog;
-	Dog copy(*test);
+	Cat* test = new Cat;
+	Cat* copy = new Cat(*test);
 	test->displayIdeas();
 	delete test;
 	sleep(1);
 	std::cout << "Now that the original is deleted, let's see the ideas of the copy :" << std::endl;
 	sleep(2);
-	copy.displayIdeas();
-
+	copy->displayIdeas();
+	delete copy;
 }
