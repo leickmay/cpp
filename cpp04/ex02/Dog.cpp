@@ -7,22 +7,17 @@ Dog::Dog():Animal("Dog")
 	_brain->setIdeas("eat", "shit", "sleep");
 }
 
-Dog::Dog(Dog const& other):Animal(other._type)
+Dog::Dog(Dog const& other):Animal("Dog")
 {
 	std::cout << "Dog copy constructor called" << std::endl;
-	_brain = new Brain;
-	*_brain = Brain(*other._brain);
+	_brain = new Brain(*other._brain);
 }
 
 Dog&	Dog::operator=(Dog const& other)
 {
 	std::cout << "Dog assignation operator called" << std::endl;
 	if (this != &other)
-	{
-		_type = other._type;
-		_brain = new Brain;
-		*_brain = Brain(*other._brain);
-	}
+		_brain = new Brain(*other._brain);
 	return *this;
 }
 
@@ -41,3 +36,4 @@ void	Dog::displayIdeas() const
 {
 	_brain->displayIdeas();
 }
+
