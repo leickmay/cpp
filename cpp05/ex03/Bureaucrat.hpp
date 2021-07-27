@@ -26,7 +26,7 @@ class Bureaucrat
 	{
 		const char* what() const throw()
 		{
-			return "\e[0;31mGrade is too high ! (max is 1)\e[0m";
+			return "\e[0;31mGrade is too high !\e[0m";
 		}
 	};
 
@@ -34,7 +34,7 @@ class Bureaucrat
 	{
 		const char* what() const throw()
 		{
-			return "\e[0;31mGrade is too low ! (min is 150)\e[0m";
+			return "\e[0;31mGrade is too low !\e[0m";
 		}
 	};
 };
