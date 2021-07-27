@@ -83,26 +83,42 @@ void identify_from_reference(Base& p)
 int main()
 {
 	srand(time(NULL));
+
 	std::cout << "==New try==" << std::endl;
 	Base*	p = generate();
+	Base&	r = *p;
 	identify_from_pointer(p);
-	identify_from_reference(*p);
+	identify_from_reference(r);
+
 	std::cout << std::endl << "==New try==" << std::endl;
 	Base*	p1 = generate();
+	Base&	r1 = *p1;
 	identify_from_pointer(p1);
-	identify_from_reference(*p1);
+	identify_from_reference(r1);
+
 	std::cout << std::endl << "==New try==" << std::endl;
 	Base*	p2 = generate();
+	Base&	r2 = *p2;
 	identify_from_pointer(p2);
-	identify_from_reference(*p2);
+	identify_from_reference(r2);
+
 	std::cout << std::endl << "==New try==" << std::endl;
 	Base*	p3 = generate();
+	Base&	r3 = *p3;
 	identify_from_pointer(p3);
-	identify_from_reference(*p3);
+	identify_from_reference(r3);
+
 	std::cout << std::endl << "==New try==" << std::endl;
 	Base*	p4 = generate();
+	Base&	r4 = *p4;
 	identify_from_pointer(p4);
-	identify_from_reference(*p4);
+	identify_from_reference(r4);
+
+	delete p;
+	delete p1;
+	delete p2;
+	delete p3;
+	delete p4;
 
 	return 0;
 }
