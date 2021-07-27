@@ -9,7 +9,23 @@ int main()
 	std::cout << BLUE << "==Here come the intern==" << RESET << std::endl;
 	Intern corenting;
 	Form* rrf;
-	rrf = corenting.makeForm("robotomy request", "Bender");
+	try
+	{
+		rrf = corenting.makeForm("robotomy request", "Bender");
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	Form* badForm;
+	try
+	{
+		badForm = corenting.makeForm("Wrong form", "Wrong guy");
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 	bob.executeForm(*rrf);
 	fabieng.signForm(*rrf);
 	fabieng.executeForm(*rrf);

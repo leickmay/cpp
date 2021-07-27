@@ -22,7 +22,7 @@ class Intern
 		{
 			const char* what() const throw()
 			{
-				return "\e[0;31mWrong type of form !\e[0m";
+				return "\e[0;31mIntern cannot make the form : Wrong type of form !\e[0m";
 			}
 		};
 };
