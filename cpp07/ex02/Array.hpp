@@ -28,6 +28,8 @@ class Array
 		{
 			if (this != &other)
 			{
+				if (_array)
+					delete[] _array;
 				_array = new T[other.size()];
 				_n = other.size();
 				for (unsigned int i = 0; i < _n; i++)
@@ -44,12 +46,18 @@ class Array
 		T		&operator[](unsigned int i) const
 		{
 			if (i >= _n  || !_array || i < 0)
-				throw std::exception();
+				throw OutOfRangeException();
 			return _array[i];
 		}
 		unsigned int	size() const {return _n;}
+
+		class OutOfRangeException : public std::exception
+		{
+			const char* what() const throw()
+			{
+				return "Error : index out of range";
+			}
+		};
 };
-
-
 
 #endif

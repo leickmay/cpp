@@ -18,7 +18,14 @@ int main()
 	for (unsigned int i = 0; i < af.size(); i++)
 		std::cout << af[i] << std::endl;
 	std::cout << "size : " << ar.size() << std::endl;
+
 	std::cout << "Try to access array[4] : " << std::endl;
-	std::cout << af[4] <<std::endl;
-	std::cout << "Program is over";
+	try
+	{
+		std::cout << af[4] <<std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 }
