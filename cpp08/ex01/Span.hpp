@@ -8,7 +8,6 @@
 # include <algorithm>
 # include <iostream>
 # include <vector>
-# include <iterator>
 
 class Span
 {
