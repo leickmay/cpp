@@ -1,21 +1,31 @@
 #ifndef EASYFIND_HPP
 # define EASYFIND_HPP
 
+# define BLUE "\e[0;34m"
+# define RED "\e[0;31m"
+# define RESET "\e[0m"
+
 # include <algorithm>
 # include <iostream>
 
-template <typename T>
-T	easyfind(T cont, int oc)
+class NotFoundException : public std::exception
 {
-	int i = 0;
-	while (cont[i])
+	const char* what() const throw()
 	{
-		if (cont[i] == oc)
-			return cont[i];
-		i++;
+		return "\e[0;31mError: Element not found\e[0m";
 	}
-	if (!cont[i])
-		return 0;
+};
+
+template <typename T>
+int	&easyfind(T cont, int oc)
+{
+	typename T::iterator it;
+	for (it = cont.begin(); it != cont.end(); it++)
+	{
+		if (*it == oc)
+			return *it;
+	}
+	throw NotFoundException();
 }
 
 #endif
