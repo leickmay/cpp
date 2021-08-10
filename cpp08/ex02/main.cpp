@@ -29,13 +29,6 @@ int main()
 		++it;
 	}
 
-	std::stack<int> s(mstack);
-
-	std::cout << BLUE << "==Stack copy of mstack==" << RESET << std::endl;
-	std::cout << s.top() << std::endl;
-	std::cout << "size of copy : " << s.size() << std::endl;
-	std::cout << "size of mstack : " << mstack.size() << std::endl;
-
 	MutantStack<std::string> strmstack;
 	std::cout << BLUE << "==Mstack of strings==" << RESET << std::endl;
 	strmstack.push("Hello");
@@ -53,31 +46,5 @@ int main()
 		++it2;
 	}
 
-	MutantStack<std::string> copy(strmstack);
-	std::cout << BLUE << "==Mstack of strings with copy contructor==" << RESET << std::endl;
-
-	MutantStack<std::string>::iterator it3 = copy.begin();
-	MutantStack<std::string>::iterator ite3 = copy.end();
-
-	while (it3 != ite3)
-	{
-		std::cout << *it3 << std::endl;
-		++it3;
-	}
-
-	MutantStack<std::string> assign;
-	std::cout << BLUE << "==Mstack of strings with assignation operator==" << RESET << std::endl;
-
-	assign.push("Random string");
-	std::cout << "before assignation : " << assign.top() << std::endl << "after : " << std::endl;
-	assign = strmstack;
-	MutantStack<std::string>::iterator it4 = assign.begin();
-	MutantStack<std::string>::iterator ite4 = assign.end();
-
-	while (it4 != ite4)
-	{
-		std::cout << *it4 << std::endl;
-		++it4;
-	}
 	return 0;
 }
